@@ -262,7 +262,7 @@ class UserControl(View):
             ret, info = qiniu.put_file(token, key, localfile, mime_type=mime_type, check_crc=True)
 
             #图片连接加上 v?时间  是因为七牛云缓存，图片不能很快的更新，用filename?v201504261312的形式来获取最新的图片
-            request.user.img = "http://vmaig.qiniudn.com/"+filename + "?v" + time.strftime('%Y%m%d%H%M%S')
+            request.user.img = "http://hongyiabx.qiniudn.com/"+filename + "?v" + time.strftime('%Y%m%d%H%M%S')
             request.user.save()
         
             #验证上传是否错误
