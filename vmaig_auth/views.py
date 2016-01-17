@@ -99,6 +99,11 @@ class UserControl(View):
                       u"网站：http://%s" % domain+"\n\n"
             from_email = None
             try:
+                print '========'
+                print 'title:%s' %title
+                print 'message:%s' %message
+                print 'from_email:%s' %from_email
+                print 'email:%s' %email
                 send_mail(title, message, from_email, [email])
             except Exception as e:
                 logger.error(u'[UserControl]用户注册邮件发送失败:[%s]/[%s]' % (username,email))
